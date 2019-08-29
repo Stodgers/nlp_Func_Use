@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Author : Stodgers
 # @Time : 2019-8-29 14:16:03
-# @FileName: csv_reader.py
+# @FileName: file_reader.py
 # @Software: PyCharm
 import pandas as pd
 import numpy as np
