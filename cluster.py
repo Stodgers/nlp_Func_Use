@@ -3,13 +3,6 @@
 # @Time : 2019-9-2 14:53:31
 # @FileName: cluster.py
 # @Software: PyCharm
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/26 17:02
-# @Author  : Stodgers
-# @Site    :
-# @File    : cluster.py
-# @Software: PyCharm
 
 import jieba
 import pandas as pd
