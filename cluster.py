@@ -89,6 +89,6 @@ class cluster:
         return key_temp,ans
 
 csv_path = 'C:\\Users\\Ma\\Desktop\\QA.csv'
-cl = cluster(10, csv_path)
+cl = cluster(20, csv_path)
 cl.disp()
 
