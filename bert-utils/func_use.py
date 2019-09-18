@@ -34,7 +34,6 @@ while(1):
         fm2 += b*b
     ans = fz/math.sqrt(fm1*fm2)
     t2 = time.time()
-
     print(int(round(t2 * 1000))-int(round(t1 * 1000))," ms")
     print(ans)
 
