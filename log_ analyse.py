@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
-import requests,re
+import requests,re_email
 import urllib
 def url_cat(h):
     url = 'http://ip.tool.chinaz.com/' + h
@@ -9,15 +9,9 @@ def url_cat(h):
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1.0'}
     print(url)
     html = requests.get(url, headers=head)
-    # html.content.decode('gb2312')
-    #print(html.encoding)
-    #print(html.apparent_encoding)
     html = html.text.encode(html.encoding).decode(html.apparent_encoding)
-
-    #print(html)
-    ren = re.compile(r'<span class="Whwtdhalf w50-0">(.*?)</span>')
-
-    html_list = re.findall(ren, html)
+    ren = re_email.compile(r'<span class="Whwtdhalf w50-0">(.*?)</span>')
+    html_list = re_email.findall(ren, html)
     if len(html_list)!=0:
         return html_list[1]
     else:
@@ -29,6 +23,7 @@ with open(path,errors='ignore') as f:
     for k,v in enumerate(tt):
         if v not in dic:
             dic[v] = 1
+            
         else:
             dic[v] += 1
     lans =[[k,v] for k,v in dic.items()]
