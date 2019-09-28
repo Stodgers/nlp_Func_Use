@@ -12,7 +12,6 @@ def email_extracor(text):
     # for k, g in groupby(eng_texts, sep.__contains__):
     #     print(k,''.join(g))
     email_pattern = r'^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z_-]+)+$'
-
     emails = []
     for eng_text in eng_split_texts:
         result = re.match(email_pattern, eng_text, flags=0)
